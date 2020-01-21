@@ -7,7 +7,7 @@ class LoginController = _LoginControllerBase with _$LoginController;
 
 /*controller */
 abstract class _LoginControllerBase with Store {
-  var loginStore = LoginModel();
+  var loginModel = LoginModel();
 
   @computed
   bool get isValid {
@@ -15,20 +15,20 @@ abstract class _LoginControllerBase with Store {
   }
 
   String validateEmail() {
-    if (loginStore.email == null || loginStore.email.isEmpty) {
+    if (loginModel.email == null || loginModel.email.isEmpty) {
       return '';
-    } else if (!loginStore.email.contains('@gmail.com') &&
-        !loginStore.email.contains('@hardylingerie.com') &&
-        !loginStore.email.contains('@hardylingerie.com.br')) {
+    } else if (!loginModel.email.contains('@gmail.com') &&
+        !loginModel.email.contains('@hardylingerie.com') &&
+        !loginModel.email.contains('@hardylingerie.com.br')) {
       return 'Informe um email válido!';
     }
     return null;
   }
 
   String validateSenha() {
-    if (loginStore.password == null || loginStore.password.isEmpty) {
+    if (loginModel.password == null || loginModel.password.isEmpty) {
       return '';
-    } else if (loginStore.password.length < 6) {
+    } else if (loginModel.password.length < 6) {
       return 'A senha precisa ter pelo menos 6 caracteres';
     }
     return null;

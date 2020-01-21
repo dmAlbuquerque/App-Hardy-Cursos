@@ -52,14 +52,14 @@ class LoginComEmail extends StatelessWidget {
                   titulo: 'E-mail',
                   dica: 'exemplo@email.com',
                   keyboard: TextInputType.emailAddress,
-                  onChanged: controller.loginStore.setEmail,
+                  onChanged: controller.loginModel.setEmail,
                   errorText: controller.validateEmail,
                 ),
                 TextBox(
                   titulo: 'Senha',
                   dica: 's&nH@',
                   isPassword: true,
-                  onChanged: controller.loginStore.setPassword,
+                  onChanged: controller.loginModel.setPassword,
                   errorText: controller.validateSenha,
                 ),
                 Padding(
