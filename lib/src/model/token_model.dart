@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class TokenModel {
   String email;
   String accessToken;

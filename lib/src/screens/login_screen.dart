@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hardycursos/src/api/login_api.dart';
 import 'package:hardycursos/src/utils/rotas.dart';
 import 'package:toast/toast.dart';
 import '../controller/login_controller.dart';
@@ -82,7 +83,12 @@ class LoginComEmail extends StatelessWidget {
                             titulo: 'Entrar',
                             onPressed: () {
                               if (controller.isValid) {
-                                nextRouteReplacement(context, Rotas.homeScreen);
+                                LoginApi.login(
+                                    context,
+                                    controller.loginModel.email,
+                                    controller.loginModel.password);
+
+                                //nextRouteReplacement(context, Rotas.homeScreen);
                               } else {
                                 Toast.show(
                                     'Preencha todos os campos para logar!',
