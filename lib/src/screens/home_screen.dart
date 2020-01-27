@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-              'A noite, vovô Kowalski vê o imã cair no pé do pinguim queixoso e vovó põe açucar no chá de tâmaras, do Jabuti feliz.'
+              'A noite, vovô Kowalski vê o imã cair no pé do pinguim queixoso e vovó põe açucar no chá de tâmaras, do Jabuti feliz.')
         ],
       ),
     );

@@ -42,5 +42,7 @@ class LoginApi {
     } catch (e) {
       b = 'sem conexão';
     }
+
+    return b;
   }
 }

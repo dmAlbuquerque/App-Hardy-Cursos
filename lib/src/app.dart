@@ -9,7 +9,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.red),
       title: 'Hardy Cursos',
-      home: HomeScreen(),
+      home: LoginComEmail(),
       routes: <String, WidgetBuilder>{
         Rotas.loginEmail: (context) => LoginComEmail(),
         Rotas.homeScreen: (context) => HomeScreen(),
