@@ -83,7 +83,7 @@ class LoginComEmail extends StatelessWidget {
                             titulo: 'Entrar',
                             onPressed: () {
                               if (controller.isValid) {
-                                dynamic result = LoginApi.login(
+                                /*dynamic result = LoginApi.login(
                                     context,
                                     controller.loginModel.email,
                                     controller.loginModel.password);
@@ -101,7 +101,7 @@ class LoginComEmail extends StatelessWidget {
                                       context,
                                       duration: Toast.LENGTH_LONG,
                                       gravity: Toast.BOTTOM);
-                                }
+                                }*/
 
                                 //nextRouteReplacement(context, Rotas.homeScreen);
                               } else {
