@@ -115,7 +115,6 @@ class LoginComEmail extends StatelessWidget {
     } else if (result == 'falha') {
       Toast.show('Usuário e/ou senha incorreta!', context,
           duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
-      //nextRouteReplacement(context, Rotas.loginScreen);
     } else if (result == 'sem conexão') {
       Toast.show('Verifique sua conexão com a internet!', context,
           duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);

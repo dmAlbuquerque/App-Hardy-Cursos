@@ -7,6 +7,27 @@ class HomeScreen extends StatelessWidget {
         title: Text('Hardy Cursos'),
       ),
       body: _body(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            title: Text('Tab 1'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            title: Text('Tab 2'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            title: Text('Tab 3'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            title: Text('Tab 4'),
+          ),
+        ],
+        backgroundColor: Colors.red,
+      ),
     );
   }
 
