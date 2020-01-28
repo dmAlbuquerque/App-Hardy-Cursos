@@ -26,10 +26,15 @@ class HomeScreen extends StatelessWidget {
             title: Text('Tab 4'),
           ),
         ],
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
+        //currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber,
+        //onTap: _onItemTapped,
       ),
     );
   }
+
+  //TODO: fazer o bottom navigation
 
   _body() {
     return SingleChildScrollView(
