@@ -83,25 +83,24 @@ class LoginComEmail extends StatelessWidget {
                             titulo: 'Entrar',
                             onPressed: () {
                               if (controller.isValid) {
-                                /*dynamic result = LoginApi.login(
+                                dynamic result = LoginApi.login(
                                     context,
                                     controller.loginModel.email,
                                     controller.loginModel.password);
 
-                                print('o Result está retornando -> $result');
                                 if (result == 'ok') {
                                   nextRouteReplacement(
                                       context, Rotas.homeScreen);
                                 } else if (result == 'falha') {
                                   nextRouteReplacement(
                                       context, Rotas.loginScreen);
-                                } else {
+                                } else if (result == 'sem conexão') {
                                   Toast.show(
                                       'Verifique sua conexão com a internet!',
                                       context,
                                       duration: Toast.LENGTH_LONG,
                                       gravity: Toast.BOTTOM);
-                                }*/
+                                }
 
                                 //nextRouteReplacement(context, Rotas.homeScreen);
                               } else {

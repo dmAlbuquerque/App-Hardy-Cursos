@@ -33,7 +33,7 @@ class LoginApi {
         var tkm = TokenModel.fromJson(json.decode(response.body));
         Infos.email = tkm.email;
         Infos.accessToken = tkm.accessToken;
-        Infos.expirationUTC = tkm.validTo;
+        Infos.expirationUTC = DateTime.parse(tkm.valid);
         b = 'ok';
       } else {
         b = 'falha';
@@ -41,6 +41,7 @@ class LoginApi {
       }
     } catch (e) {
       b = 'sem conexão';
+      print('e do catch $e');
     }
 
     return b;
