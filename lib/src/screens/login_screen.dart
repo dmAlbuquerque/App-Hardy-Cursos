@@ -83,25 +83,7 @@ class LoginComEmail extends StatelessWidget {
                             titulo: 'Entrar',
                             onPressed: () {
                               if (controller.isValid) {
-                                dynamic result = LoginApi.login(
-                                    context,
-                                    controller.loginModel.email,
-                                    controller.loginModel.password);
-
-                                if (result == 'ok') {
-                                  nextRouteReplacement(
-                                      context, Rotas.homeScreen);
-                                } else if (result == 'falha') {
-                                  nextRouteReplacement(
-                                      context, Rotas.loginScreen);
-                                } else if (result == 'sem conexão') {
-                                  Toast.show(
-                                      'Verifique sua conexão com a internet!',
-                                      context,
-                                      duration: Toast.LENGTH_LONG,
-                                      gravity: Toast.BOTTOM);
-                                }
-
+                                validateLogin(context, controller);
                                 //nextRouteReplacement(context, Rotas.homeScreen);
                               } else {
                                 Toast.show(
@@ -122,6 +104,22 @@ class LoginComEmail extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  validateLogin(BuildContext context, var controller) async {
+    dynamic result = await LoginApi.login(
+        context, controller.loginModel.email, controller.loginModel.password);
+
+    if (result == 'ok') {
+      nextRouteReplacement(context, Rotas.homeScreen);
+    } else if (result == 'falha') {
+      Toast.show('Usuário e/ou senha incorreta!', context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+      //nextRouteReplacement(context, Rotas.loginScreen);
+    } else if (result == 'sem conexão') {
+      Toast.show('Verifique sua conexão com a internet!', context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+    }
   }
 
   //TODO: fazer o app voltar para a tela anterior ao clicar no botão de voltar do cel
